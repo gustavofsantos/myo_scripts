@@ -1,3 +1,4 @@
+# -*- coding utf 8 -*-
 import myo as libmyo
 import pyautogui
 import pygame
@@ -41,14 +42,14 @@ class Listener(libmyo.DeviceListener):
 			print('[*] Wave in')
 			pygame.event.post(pygame.event.Event(pygame.K_LEFT))
 		elif pose == libmyo.Pose.fingers_spread:
-			print('[*] Mão aberta')
+			print('[*] Mao aberta')
 			pygame.event.post(pygame.K_p)
 
 
 def main():
 	# pyautogui.PAUSE = 1
 	pyautogui.FAILSAFE = True
-	libmyo.init('C:\\myo-sdk-win-0.9.0\\myo-sdk-win-0.9.0\\bin')
+	libmyo.init('C:\\myo-sdk-win-0.9.0\\bin')
 	hub = libmyo.Hub()
 	hub.run(1000, Listener())
 	try:

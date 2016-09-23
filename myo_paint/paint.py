@@ -1,7 +1,7 @@
 # Autor: Gustavo Santos
 # Email: gfdsantos@inf.ufpel.edu.br
 
-import pygame, random
+import pygame, random, pyautogui
 
 def desenhar(srf, cor, inicio, fim, raio=1):
     '''
@@ -19,7 +19,7 @@ def desenhar(srf, cor, inicio, fim, raio=1):
 
 
 def main():
-    tela = pygame.display.set_mode((800,600))
+    tela = pygame.display.set_mode(pyautogui.size(), pygame.FULLSCREEN)
 
     cores = [(255, 60, 60), (0, 220, 0), (30, 60, 255), (240, 0, 130), (230, 220, 50)]
     borracha = (0, 0 ,0)

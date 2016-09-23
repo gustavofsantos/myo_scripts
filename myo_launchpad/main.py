@@ -45,6 +45,9 @@ class Listener(libmyo.DeviceListener):
         self.locked = False
         print('[*] Destravado')
 
+    def on_arm_sync(myo, timestamp, arm, x_direction, rotation, warmup_state):
+        print(rotarion)
+
     def on_pose(self, myo, timestamp, pose):
         if pose == libmyo.Pose.fist:
             print('[*] Punho fechado')

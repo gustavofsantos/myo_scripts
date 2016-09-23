@@ -328,7 +328,7 @@ Pressione Espaço para continuar""" % self.score)
 
 
 if __name__ == '__main__':
-	libmyo.init('C:\\myo-sdk-win-0.9.0\\myo-sdk-win-0.9.0\\bin')
+	libmyo.init('C:\\myo-sdk-win-0.9.0\\bin')
 	hub = libmyo.Hub()
 	hub.run(1000, Listener())
 	App = TetrisApp()
